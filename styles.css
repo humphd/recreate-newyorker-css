@@ -1,0 +1,148 @@
+/**
+ * Load two web fonts from Google Fonts:
+ *  1. EB Garamond - https://fonts.google.com/specimen/EB+Garamond
+ *  2. Reem Kufi   - https://fonts.google.com/specimen/Reem+Kufi
+ */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Reem+Kufi&display=swap');
+
+/**
+ * Load the Irvin Heading font - https://www.onlinewebfonts.com/download/1e44faec07b8b81f60a3215d76bd0086 
+ */
+@import url('//db.onlinewebfonts.com/c/1e44faec07b8b81f60a3215d76bd0086?family=Irvin');
+
+body {
+  margin: 40px;
+}
+
+header, main {
+  max-width: 700px;
+}
+
+header h1,
+header h2 {
+  font-family: Irvin, serif;
+}
+
+header h1 {
+  font-size: 2.8em;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+header h2 {
+  color: red;
+  font-size: .8em;
+}
+
+header p {
+  font-family: 'Reem Kufi', sans-serif;
+}
+
+#social {
+  display: none;
+  color: black;
+}
+
+#social i {
+  padding: 20px 25px;
+}
+
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid lightgray;
+}
+
+
+main {
+  margin: 20px 50px;
+  max-width: 550px;
+  font-family: 'EB Garamond', 'Times New Roman', serif;
+  font-size: 1.3em;
+  line-height: 1.6;
+}
+
+figure {
+  margin: 10px;
+}
+
+figcaption {
+  font-style: italic;
+  font-size: .8em;
+  line-height: 1.2;
+}
+
+img {
+  max-width: 100%;
+}
+
+.credit {
+  color: gray;
+  font-family: sans-serif;
+  font-style: normal;
+  font-size: .7em;
+}
+
+.credit a {
+  text-decoration: none;
+  color: gray;
+}
+
+.credit a:hover {
+  text-decoration: underline;
+}
+
+/* dropcap effect, https://css-tricks.com/snippets/css/drop-caps/ */
+#first-letter {
+  float: left; /* let this letter float to the left of the other content */
+  font-size: 75px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 8px;
+}
+
+
+/**
+ * When we're on a screen (vs. print, etc) and the width is less than 900 px,
+ * centre everything.  Otherwise we'll left-align
+ */
+ @media screen and (max-width: 700px) {
+  /**
+   * When we're on a screen (vs. print, etc) and the width is less than 900 px,
+   * centre everything.  Otherwise we'll left-align
+   */
+  header {
+    margin: 10px;
+    text-align: center;
+  }
+
+  /**
+   * Show the social sharing icons on small screens, hidden otherwise.
+   */
+  #social {
+    display: block;
+  }
+
+  /**
+   * Get rid of the whitespace at the edge of the body (show more content)
+   */
+  body {
+    margin: 0;
+    width: 100%;
+  }
+
+  /**
+   * Reduce the margin on the main content
+   */
+  main {
+    margin: 10px;
+  }
+
+  /**
+   * Let the two main containers in the <body> fill the viewport
+   */
+  header, main {
+    max-width: 100%;
+  }
+}
