@@ -6,9 +6,19 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Reem+Kufi&display=swap');
 
 /**
- * Load the Irvin Heading font - https://www.onlinewebfonts.com/download/1e44faec07b8b81f60a3215d76bd0086 
+ * Load the Irvin Heading font - https://www.onlinewebfonts.com/download/1e44faec07b8b81f60a3215d76bd0086
+ * NOTE: on GitHub, which is loading over HTTPS, these fonts have to be loaded
+ * over HTTPS vs. HTTP, so instead of using @import url('https://db.onlinewebfonts.com/c/1e44faec07b8b81f60a3215d76bd0086?family=Irvin');
+ * I'm defining the font-face manually with proper HTTPS URLs
  */
-@import url('//db.onlinewebfonts.com/c/1e44faec07b8b81f60a3215d76bd0086?family=Irvin');
+@font-face {font-family: "Irvin";
+  src: url("https://db.onlinewebfonts.com/t/1e44faec07b8b81f60a3215d76bd0086.eot"); /* IE9*/
+  src: url("https://db.onlinewebfonts.com/t/1e44faec07b8b81f60a3215d76bd0086.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("https://db.onlinewebfonts.com/t/1e44faec07b8b81f60a3215d76bd0086.woff2") format("woff2"), /* chrome firefox */
+  url("https://db.onlinewebfonts.com/t/1e44faec07b8b81f60a3215d76bd0086.woff") format("woff"), /* chrome firefox */
+  url("https://db.onlinewebfonts.com/t/1e44faec07b8b81f60a3215d76bd0086.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
+  url("https://db.onlinewebfonts.com/t/1e44faec07b8b81f60a3215d76bd0086.svg#Irvin") format("svg"); /* iOS 4.1- */
+}
 
 body {
   margin: 40px;
